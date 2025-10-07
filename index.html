@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bookstore Frontend</title>
+</head>
+<body>
+    <h1>Книгарня</h1>
+    <div id="books"></div>
+
+    <script>
+        fetch('http://localhost:8000/api/books/')
+            .then(response => response.json())
+            .then(books => {
+                let html = '<h2>Список книг:</h2><ul>';
+                books.forEach(book => {
+                    html += `<li>${book.title} - ${book.author}</li>`;
+                });
+                html += '</ul>';
+                document.getElementById('books').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Помилка:', error);
+            });
+    </script>
+</body>
+</html>
