@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookstore - Кабінет</title>
+    <style>
+        body { font-family: Arial; max-width: 800px; margin: 0 auto; padding: 20px; }
+        nav { background: #f0f0f0; padding: 10px; margin-bottom: 20px; }
+        .btn { padding: 8px 12px; margin: 5px; text-decoration: none; border: 1px solid #ccc; }
+        .info-box { background: #f9f9f9; padding: 15px; margin: 10px 0; border-left: 4px solid #2196F3; }
+    </style>
+</head>
+<body>
+    <nav>
+        <strong>📚 Bookstore</strong>
+        <span id="navLinks">
+        </span>
+    </nav>
+
+    <h1>Особистий кабінет</h1>
+    
+    <div id="userInfo" class="info-box">
+    </div>
+
+    <div class="info-box">
+        <h3>Доступний тільки для авторизованих:</h3>
+        <ul>
+            <li>Повний каталог книг</li>
+            <li>Історія замовлень</li>
+            <li>Особисті налаштування</li>
+            <li>Список бажань</li>
+        </ul>
+    </div>
+
+    <script src="auth.js"></script>
+    <script>
+        updateNav();
+    </script>
+</body>
+</html>
