@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookstore - Головна</title>
+    <style>
+        body { font-family: Arial; max-width: 800px; margin: 0 auto; padding: 20px; }
+        nav { background: #f0f0f0; padding: 10px; margin-bottom: 20px; }
+        .btn { padding: 10px 15px; margin: 5px; text-decoration: none; border: 1px solid #ccc; background: white; }
+        .message { padding: 10px; margin: 10px 0; border-radius: 4px; }
+        .success { background: #d4ffd4; border: 1px solid green; }
+        .error { background: #ffd4d4; border: 1px solid red; }
+    </style>
+</head>
+<body>
+    <nav>
+        <strong>📚 Bookstore</strong>
+        <span id="navLinks">
+        </span>
+    </nav>
+
+    <h1>Ласкаво просимо до Bookstore!</h1>
+    
+    <div id="guestContent">
+        <p>Ця інформація доступна всім користувачам:</p>
+        <ul>
+            <li>Перегляд основних книг</li>
+            <li>Інформація про магазин</li>
+            <li>Контактні дані</li>
+        </ul>
+        <p>
+            <a href="login.html" class="btn">Увійти</a>
+            <a href="register.html" class="btn">Реєстрація</a>
+        </p>
+    </div>
+
+    <div id="userContent" style="display: none;">
+        <p>Вітаємо, <span id="userName"></span>! Ви авторизовані.</p>
+        <p>Особливий контент для авторизованих користувачів:</p>
+        <ul>
+            <li>Повний каталог книг</li>
+            <li>Особисті рекомендації</li>
+            <li>Історія замовлень</li>
+        </ul>
+        <p><a href="dashboard.html" class="btn">Особистий кабінет</a></p>
+    </div>
+
+    <script src="auth.js"></script>
+    <script>
+        updateNav();
+    </script>
+</body>
+</html>
